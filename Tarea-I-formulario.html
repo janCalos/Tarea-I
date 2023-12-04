@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Psicológico</title>
+    <style>
+        * {box-sizing: border-box;}
+        h2 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 6px solid #F5D879;
+            margin: auto;
+            background-color: #F6F5A4;
+        }
+
+        form label {
+            width: 100%;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form input[type="date"],
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #000000;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 10px 5px 5px #F8EA7B;
+        }
+
+        form input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: block;
+            color: #fff;
+            background-color: #000;
+            cursor: pointer;
+        }
+        #Conseguir_terapia {
+            height: 100px;
+            border-radius:  15px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #333;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+            resize: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulario consulta Psicológica</h2>
+    <form action="">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escriba Su Nombre Aqui." required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Escriba Su Apellido Aqui." required>
+
+        <label for="email">Dirección de correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Escriba Su Correo Electronico aqui." required>
+
+        <label for="telefono">Número de teléfono de contacto:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-10]+" placeholder="Escriba Su Numero Telefonico Aqui." required>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+        <label>Sexo:</label>
+        <label for="masculino"><input type="radio" value="1" name="sexo" required> Masculino</label>
+        <label for="femenino"><input type="radio" value="2" name="sexo" required> Femenino</label>
+
+        <label for="pais">País/Región:</label>
+        <select id="pais" name="pais">
+            <option>República Dominicana</option>
+            <option>México</option>
+            <option>Bolivia</option>
+            <option>Estados Unidos</option>
+            <option>Brasil</option>
+            <option>Costa Rica</option>
+            <option>China</option>
+            <option>Italia</option>
+        </select>
+
+        <label>Dificultades Personales:
+        <label><input type="checkbox" name="Personales"> Ansiedad</label>
+        <label><input type="checkbox" name="Personales"> Estrés</label>
+        <label><input type="checkbox" name="Personales"> Falta de Motivación</label>
+        <label><input type="checkbox" name="Personales"> Depresión</label>
+        </label required>
+        </br>
+        <label>Circusntancias Dolorosas:
+
+
+                <label><input type="checkbox" name="Circusntancias"> Duelo</label>
+                <label><input type="checkbox" name="Circusntancias"> Trauma</label>
+                <label><input type="checkbox" name="Circusntancias"> Separacion</label>
+                <label><input type="checkbox" name="Circusntancias"> Enfermedad</label>
+                </label>
+
+        </br>
+        <label>¿Con qué frecuencia te sientes sola?
+            <label for="siempre"><input type="radio" name="frecuencia" > Siempre</label>
+            <label for="Muy_a_amenudo"><input type="radio" name="frecuencia" > Muy a menuda</label>
+            <label for="nunca"><input type="radio"  name="frecuencia" > A veces</label>
+            <label for="nunca"><input type="radio" name="frecuencia" > Rara vez</label>
+            <label for="nunca"><input type="radio"  name="frecuencia" > Nunca</label>
+            </label>
+            </br>
+        <label>Que Espera Conseguir De Esta Terapia<input id= "Conseguir_terapia" type="text" placeholder="Diga Lo Que Espera Superar O Objetivos Alcanzar." required></label>
+        
+
+        <label>Disponibilidad de horario para las sesiones:</label>
+        <select id="horario" name="horario">
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+        </select>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</body>
+
+</html>
